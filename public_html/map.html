@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Función Map</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script type="text/javascript">
+            const numeros = [45, 62, 98, 12, 21];
+
+            const numerosMas10 = numeros.map(function (val) {
+                return val + 10;
+            });
+
+            console.log(numerosMas10);
+
+            const numerosElevados = [1, 4, 9, 16, 25, 36];
+
+            const raices = numerosElevados.map(function (x) {
+                return Math.sqrt(x);
+            });
+
+            console.log(raices);
+
+            const matriz = [[1, 2, 3], [5, 6], [21, 87, 12, 14]];
+
+            const numerosElementos = matriz.map(function (a) {
+                return a.length;
+            });
+            
+            console.log(numerosElementos);
+        </script>
+    </body>
+</html>

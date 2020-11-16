@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>setTimeout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            const conteo = function (milisegundos) {
+                setTimeout(function () {
+                    // console.log("Hola Mundo!");
+                    let segundos = (milisegundos / 1000);
+                    console.log(`Tiempo transcurrido: ${segundos} segundos.`);
+                }, milisegundos);
+            };
+
+            conteo(3000); // 3 segundos.
+            conteo(5000); // 5 segundos.
+            conteo(8000); // 8 segundos.
+        </script>
+    </body>
+</html>

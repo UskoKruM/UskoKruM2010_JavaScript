@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>setInterval</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <img id="slider" width="1120" height="630" />
+        <script>
+            window.addEventListener('load', function () {
+                console.log("Documento cargado!");
+
+                const slider = document.getElementById("slider");
+
+                const imagenes = ["wallpaper1.jpg", "wallpaper2.jpg", "wallpaper3.jpg"];
+                let indexImagenes = 0;
+
+                const cambiarImagenes = function () {
+                    // slider.src = "img/wallpaper1.jpg";
+                    slider.src = `img/${imagenes[indexImagenes]}`;
+                    if (indexImagenes < (imagenes.length - 1)) {
+                        indexImagenes++;
+                    } else {
+                        indexImagenes = 0;
+                    }
+                };
+
+                cambiarImagenes();
+
+                setInterval(cambiarImagenes, 2000);
+            });
+            /*
+             const intervalo = function () {
+             console.log("UskoKruM2010");
+             };
+             
+             setInterval(intervalo, 500);
+             */
+        </script>
+    </body>
+</html>

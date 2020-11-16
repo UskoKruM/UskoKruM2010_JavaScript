@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objetos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             Un objeto es un grupo de valores.
+             A diferencia de las arreglos, podemos tener algunas ventajas
+             adicionales al usarlos como asignar nuestras propias llaves
+             personalizadas para referenciar valores.
+             */
+            miObjeto = {}; // Declarando un objeto.
+            persona1 = {apellidos: "García Fuentes", nombres: "Oscar", edad: 28};
+            console.log(persona1.apellidos);
+            persona2 = {
+                apellidos: "Paz Cabrera",
+                nombres: "Ana",
+                edad: 23,
+                sexo: 'F'
+            };
+            console.log(persona2.nombres);
+            persona2.nombres = "Ana Cecilia";
+            console.log(persona2.nombres);
+
+            var lenguajes = ["PHP", "Python", "Java", "Ruby"];
+            console.log(lenguajes[2]);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fechas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var fecha = new Date();
+
+            document.write(fecha + "<br/>");
+            document.write(fecha.toDateString() + "<br/>");
+            // UTC => Universal Time Coordinated -> Tiempo Universal Coordinado.
+            document.write(fecha.toUTCString() + "<br/>");
+            document.write("Día: " + fecha.getDate() + "<br/>");
+            document.write("Mes: " + (fecha.getMonth() + 1) + "<br/>");
+            document.write("Año: " + fecha.getFullYear() + "<br/>");
+        </script>
+    </body>
+</html>

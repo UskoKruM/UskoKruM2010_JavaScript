@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programación Orientada a Objetos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <h1>Programación Orientada a Objetos</h1>
+        <script type="text/javascript">
+            const pelicula = {
+                id: 001,
+                nombre: "Harry Potter",
+                reproducir() {
+                    return "wsfsafa" + this.nombre;
+                },
+                reproducir2: function () {
+                    return "wsfsafa" + this.nombre;
+                }
+            };
+
+            console.log(pelicula.reproducir());
+            console.log(pelicula.reproducir2());
+
+            class Pelicula {
+
+                constructor() {
+                    this.id = "001";
+                    this.nombre = "Harry Potter";
+                }
+
+            }
+
+            var peli1 = new Pelicula();
+            console.log(peli1);
+            console.log(peli1.nombre);
+
+            class Persona {
+
+                // Solo puede haber 1 constructor dentro de la clase:
+                constructor(apellidos, nombres, edad) {
+                    this.apellidos = apellidos;
+                    this.nombres = nombres;
+                    this.edad = edad;
+                }
+
+                nombreCompleto() {
+                    return this.apellidos + ", " + this.nombres;
+                }
+
+            }
+
+            var persona1 = new Persona("García Fuentes", "Oscar Alejandro Flavio", 28);
+            var persona2 = new Persona("Torres Jiménez", "Ana", 23);
+
+            console.log(persona1.apellidos);
+            console.log(persona1.nombreCompleto());
+
+            class Trabajador extends Persona {
+
+                constructor(apellidos, nombres, edad, sueldo) {
+                    super(apellidos, nombres, edad);
+                    this.sueldo = sueldo;
+                }
+
+            }
+
+            var trabajador1 = new Trabajador("García Fuentes", "UskoKruM", 28);
+            console.log(trabajador1.nombreCompleto());
+        </script>
+    </body>
+</html>

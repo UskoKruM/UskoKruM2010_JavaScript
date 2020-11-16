@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Funciones Flecha</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function elevarCuadrado(numero) {
+                return numero * numero;
+            }
+
+            console.log(elevarCuadrado(7));
+
+            /*
+             const elevarCuadrado2 = num => {
+             return num * num;
+             };
+             */
+
+            const elevarCuadrado2 = num => num * num;
+
+            console.log(elevarCuadrado2(7));
+
+            const sumar = (n1, n2) => n1 + n2;
+
+            console.log(sumar(15, 21));
+
+            const persona = {
+                apellidos: "López Salcedo",
+                nombres: "Alexander",
+                saludar: function () {
+                    console.log(`Saludos! Mi nombre es: ${this.nombres}`);
+                },
+                despedir: () => {
+                    console.log(`Adios! Mis apellidos son: ${this.apellidos}`);
+                }
+            };
+            
+            persona.saludar();
+            persona.despedir();
+        </script>
+    </body>
+</html>

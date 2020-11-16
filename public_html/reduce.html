@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Función Reduce</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script type="text/javascript">
+            const arreglo = [10, 31, 100, 5];
+            
+            /*
+            const reductor = arreglo.reduce(function (valorAnterior, valorActual) {
+                return valorAnterior + valorActual;
+            });
+            */
+            
+            const reductor = arreglo.reduce(function (valorAnterior, valorActual) {
+                return valorAnterior + valorActual;
+            }, 10);
+            
+            console.log(reductor);
+        </script>
+    </body>
+</html>

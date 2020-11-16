@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM API</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script type="text/javascript">
+            // DOM: Document Object Model: Modelo de Objetos del Documento.
+            // API: Application Programming Interface: Interfaz de Programa de Aplicación.
+
+            // DOM API: Provee un modelo estándar sobre cómo pueden combinarse objetos
+            // dentro de un documento XML, HTML o XHTML, y una interfaz estándar para 
+            // acceder a ellos y manipularlos.
+
+            // XHTML es HTML expresado como XML válido, es más estricto a nivel técnico.
+
+            // W3C: World Wide Web Consortium (Consorcio WWW)
+            // Es un consorcio internacional que genera recomendaciones y 
+            // estándares que aseguran el crecimiento de la World Wide Web a largo plazo.​
+            // W3C ha estandarizado la API para poder crear y manipular elementos 
+            // dentro de la estructura jerárquica de un elemento XML, HTML o XHTML.
+
+            var nuevoParrafo = document.createElement('p');
+            nuevoParrafo.textContent = "Este párrafo fue creado mediante JavaScript.";
+            document.body.appendChild(nuevoParrafo);
+        </script>
+    </body>
+</html>

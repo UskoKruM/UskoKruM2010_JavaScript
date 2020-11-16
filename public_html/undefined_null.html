@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Undefined and Null</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+             null se usa para representar la ausencia intencional de un valor 
+             de objeto y es un valor primitivo. Es un objeto que indica que una 
+             variable ha sido explícitamente asignada como "sin valor".
+             */
+
+            console.log(typeof null);
+
+            var prueba = null;
+            console.log(prueba === null);
+
+            /*
+             undefined se usa para indicar la ausencia de un valor asignado.
+             Es una propiedad o valor global.
+             */
+            console.log(typeof undefined);
+
+            console.log(null == undefined); // true
+            console.log(null === undefined); // false
+            
+            var nombre;
+            console.log(nombre);
+            
+            console.log(window.undefined); // undefined
+        </script>
+    </body>
+</html>
