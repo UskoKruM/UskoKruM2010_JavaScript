@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Async - Await</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            const sumar = (num1, num2) => {
+                return new Promise((res, rej) => {
+                    setTimeout(() => {
+                        let suma = num1 + num2;
+                        if (suma > 100) {
+                            res(suma);
+                        } else {
+                            rej('Error al procesar los datos');
+                        }
+                    }, 2000);
+                });
+            };
+
+            const llamarFuncion = async() => {
+                try {
+                    const res = await sumar(12, 8);
+                    console.log(res);
+                } catch (e) {
+                    console.log(`Error: ${e}`);
+                }
+            };
+
+            llamarFuncion();
+        </script>
+    </body>
+</html>

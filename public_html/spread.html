@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operador Spread</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            const numeros1 = [45, 67, 91];
+            const numeros2 = [31, ...numeros1, 86, 156, 7];
+
+            const objeto = {...numeros1};
+
+            console.log(numeros1);
+            console.log(numeros2);
+
+            numeros2.push(103);
+
+            console.log(numeros1);
+            console.log(numeros2);
+            console.log(objeto);
+
+            const operacion = (n1, n2, n3) => {
+                return n1 + n2 + n3;
+            };
+
+            console.log(operacion(...numeros2));
+        </script>
+    </body>
+</html>

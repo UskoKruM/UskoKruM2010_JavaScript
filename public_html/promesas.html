@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promesas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            /*
+             * El objeto Promise (Promesa) es usado para procesamientos asíncronos.
+             * Una promesa representa un valor que puede estar disponible ahora, en el futuro 
+             * o quizás nunca.
+             */
+
+            /*
+             let promesa = new Promise((resolve, reject) => {
+             // resolve('Éxito en el procesamiento.');
+             reject('¡Error en el procesamiento!');
+             });
+             
+             promesa.then((resultado) => {
+             console.log(resultado);
+             }).catch((error) => {
+             console.log(error);
+             }).finally(() => {
+             console.log('El procesamiento ha terminado...');
+             });
+             */
+
+            const contar = (palabra) => {
+                return new Promise((res, rej) => {
+                    setTimeout(() => {
+                        let nLetras = String(palabra).length;
+                        if (nLetras < 20) {
+                            let data = {
+                                'respuesta': 'Ok'
+                            };
+                            // res('Ok');
+                            res(JSON.stringify(data));
+                        } else {
+                            rej('Error');
+                        }
+                    }, 2000);
+                });
+            };
+
+            let respuesta = contar('programacion');
+
+            respuesta.then((res) => {
+                return res;
+            }).then((res) => {
+                const data = JSON.parse(res);
+                console.log(data);
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                console.log('Todo ha terminado');
+            });
+        </script>
+    </body>
+</html>

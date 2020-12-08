@@ -7,24 +7,42 @@
         <link href="img/favicon.ico" rel="shortcut icon">
     </head>
     <body>
-        <script type="text/javascript">
-            var nombre = null;
+        <input type="number" id="num1"/>
+        <input type="number" id="num2"/>
+        <button id="btnSumar">Sumar</button>
+        <script>
+            const sumar = (n1, n2, callback) => {
+                return callback(n1 + n2);
+            };
 
-            function asignarNombre(funcionPosterior) {
-                setTimeout(function () {
-                    nombre = "UskoKruM2010";
-                    console.log("Valor asignado");
-                    funcionPosterior();
-                }, 1000);
-            }
+            document.getElementById('btnSumar').addEventListener('click', () => {
+                let num1 = parseInt(document.getElementById('num1').value);
+                let num2 = parseInt(document.getElementById('num2').value);
 
-            function saludar() {
-                console.log(`Mucho gusto, ${nombre}`);
-            }
-
-            asignarNombre(function () {
-                saludar();
+                sumar(num1, num2, (res) => {
+                    console.log(`El resultado es: ${res}`);
+                });
             });
+            /*
+             const fun1 = (callback) => {
+             console.log("Inicio");
+             callback();
+             console.log("Fin");
+             };
+             
+             const fun2 = () => {
+             console.log('Proceso intermedio');
+             };
+             
+             fun1(fun2);
+             */
+            /*
+             window.addEventListener('load', () => {
+             const titulo = document.getElementById('titulo');
+             titulo.innerHTML = "UskoKruM2010";
+             });
+             */
         </script>
+        <!--<h1 id="titulo">Texto</h1>-->
     </body>
 </html>
