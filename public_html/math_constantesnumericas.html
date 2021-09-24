@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math y constantes Numéricas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            // Constantes Math:
+            console.log(Math.E);
+            console.log(Math.LN10);
+            console.log(Math.LN2);
+            console.log(Math.LOG10E);
+            console.log(Math.LOG2E);
+            console.log(Math.PI);
+            console.log(Math.SQRT1_2);
+            console.log(Math.SQRT2);
+            console.log("=================================");
+
+            // Constantes Number:
+            console.log(Number.EPSILON);
+            console.log(Number.MAX_SAFE_INTEGER);
+            console.log(Number.MAX_VALUE);
+            console.log(Number.MIN_SAFE_INTEGER);
+            console.log(Number.MIN_VALUE);
+            console.log(Number.NEGATIVE_INFINITY);
+            console.log(Number.POSITIVE_INFINITY);
+            console.log("=================================");
+
+            // Redondeo de acuerdo al valor:
+            console.log(Math.round(2.3));
+            console.log(Math.round(3.1));
+            console.log(Math.round(6.95));
+            console.log("=================================");
+
+            // Redondeo siempre hacia arriba:
+            console.log(Math.ceil(2.05));
+            console.log(Math.ceil(3.83));
+            console.log("=================================");
+
+            // Redondeo siempre hacia abajo
+            console.log(Math.floor(8.94));
+            console.log(Math.floor(-2.31));
+            console.log("=================================");
+
+            // Redondeo a una cantidad de decimales:
+            let miNumero = 2 / 3;
+            let multiplicador = 100;
+            let a = Math.round(miNumero * multiplicador) / multiplicador;
+            let b = Math.ceil(miNumero * multiplicador) / multiplicador;
+            let c = Math.floor(miNumero * multiplicador) / multiplicador;
+            console.log(`${a} - ${b} - ${c}`);
+            console.log("=================================");
+
+            // Truncar:
+            console.log(Math.trunc(2.3));
+            console.log(Math.trunc(-7.1));
+            console.log(Math.trunc(24528324.193));
+            console.log(Math.trunc(-91832423.917));
+            console.log("=================================");
+
+            // Raíz y potencias:
+            console.log(Math.pow(5, 3));
+            console.log(Math.sqrt(36));
+            console.log("=================================");
+
+            // Trigonometría:
+            console.log(Math.sin(35));
+            console.log(Math.cos(87));
+            console.log(Math.tan(45));
+        </script>
+    </body>
+</html>

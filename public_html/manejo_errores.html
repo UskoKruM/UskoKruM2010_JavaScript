@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Try - Catch - Finally</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            /*
+             try {
+             // funcionNoDefinida();
+             console.log("JS");
+             } catch (error) {
+             console.log(error);
+             } finally {
+             console.log("Todo ha terminado.");
+             }
+             */
+
+            let a = 12, b = 0;
+            try {
+                if (b === 0) {
+                    throw new TypeError('No se puede dividir entre 0...');
+                }
+                console.log(`Cociente: ${(a / b)}`);
+            } catch (err) {
+                if (err instanceof TypeError) {
+                    console.warn(err);
+                    console.warn(err.message);
+                } else {
+                    console.log('Ocurrió un error genérico...');
+                }
+            } finally {
+                console.log("Todo ha terminado.");
+            }
+        </script>
+    </body>
+</html>

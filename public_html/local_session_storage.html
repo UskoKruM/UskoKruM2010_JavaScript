@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LocalStorage | SessionStorage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            /*
+             El objeto Storage (API de almacenamiento web) nos permite almacenar datos de 
+             manera local en el navegador y sin necesidad de realizar alguna conexión a una 
+             base de datos.
+             */
+
+            /*
+             localStorage y sessionStorage son propiedades que acceden al objeto Storage y 
+             tienen la función de almacenar datos de manera local, la diferencia entre éstas 
+             dos es que localStorage almacena la información de forma indefinida o hasta que 
+             se decida limpiar los datos del navegador y sessionStorage almacena información 
+             mientras la pestaña donde se esté utilizando siga abierta, una vez cerrada, la 
+             información se elimina.
+             */
+
+            /*
+             Las características de Local Storage y Session Storage son:
+             - Permiten almacenar entre 5MB y 10MB de información; incluyendo texto y multimedia.
+             - La información está almacenada en la computadora del cliente y NO es enviada en 
+             cada petición del servidor, a diferencia de las cookies.
+             - Utilizan un número mínimo de peticiones al servidor para reducir el tráfico de 
+             la red.
+             - Previenen pérdidas de información cuando se desconecta de la red.
+             - La información es guardada por domino web (incluye todas las páginas del dominio).
+             - localStorage solo soporta Strings.
+             */
+            if (typeof (Storage) !== 'undefined') {
+                console.log(Storage);
+                // Asignar elementos:
+                let cursos = ["PHP", "Python", "Java", "C#", "JavaScript"];
+                // localStorage.setItem("cursos", cursos);
+                localStorage.setItem("cursos", JSON.stringify(cursos));
+                localStorage.canal = "UskoKruM2010";
+                localStorage.lenguaje = "JavaScript";
+                // Leer elementos almacenados:
+                // console.log(localStorage.getItem("cursos"));
+                let cursosAlmacenados = JSON.parse(localStorage.getItem("cursos"));
+                console.log(cursosAlmacenados);
+                console.log(localStorage.lenguaje);
+                // Eliminar un elemento:
+                localStorage.removeItem("canal");
+                // Eliminar todos los elementos:
+                localStorage.clear();
+            } else {
+                alert("Storage no es compatible en este navegador.");
+            }
+        </script>
+    </body>
+</html>

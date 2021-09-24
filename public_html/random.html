@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random (Aleatorios)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+    </head>
+    <body>
+        <script>
+            // Aleatorio: entre 0 (inclusivo) y 1 (exclusivo).
+            /*
+             for (let x = 0; x <= 100; x++) {
+             console.log(Math.random());
+             }
+             */
+
+            /*
+             const generarAleatorio = (min, max) => {
+             return Math.floor(Math.random() * (max - min)) + min;
+             };
+             for (let x = 0; x <= 100; x++) {
+             console.log(generarAleatorio(10, 20));
+             }
+             */
+
+            let numeros = "0123456789";
+            let letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let simbolos = ".?,;-_¡!¿*%&$/()[]{}|@><";
+            let todo = numeros + letras + simbolos;
+
+            const generarPassword = (longitud) => {
+                let password = "";
+                for (let x = 0; x < longitud; x++) {
+                    let aleatorio = Math.floor(Math.random() * todo.length);
+                    password += todo.charAt(aleatorio);
+                }
+                return password;
+            };
+
+            for (let x = 0; x < 20; x++) {
+                console.log(generarPassword(15));
+            }
+
+        </script>
+    </body>
+</html>
